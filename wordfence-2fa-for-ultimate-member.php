@@ -5,7 +5,8 @@
  * Version: 0.1.0
  * Author: David D. Miller
  * Author URI: https://github.com/justdave
- * License: GPLv2+
+ * License: GPLv2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Requires at least: 6.2
  * Requires PHP: 8.0
  * Tested up to: 7.0

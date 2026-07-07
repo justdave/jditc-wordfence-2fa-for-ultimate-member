@@ -3,6 +3,8 @@
  * Wordfence 2FA Ultimate Member integration class.
  *
  * @package JDITC\Wordfence_2FA_for_Ultimate_Member
+ * @license GPL-2.0-or-later
+ * @since 0.1.0
  */
 
 namespace JDITC\Wordfence_2FA_for_Ultimate_Member;
