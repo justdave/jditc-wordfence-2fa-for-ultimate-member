@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Plugin security icon</title>
+  <desc id="desc">A shield with a checkmark representing protected two-factor authentication.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="140" y1="120" x2="884" y2="904" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d1b2a"/>
+      <stop offset="0.55" stop-color="#123c5a"/>
+      <stop offset="1" stop-color="#1a7f8f"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="324" y1="232" x2="700" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f4fbff"/>
+      <stop offset="1" stop-color="#b8d9e8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1024" height="1024" rx="220" fill="url(#background)"/>
+  <circle cx="218" cy="218" r="160" fill="#ffffff" opacity="0.08"/>
+  <circle cx="820" cy="790" r="190" fill="#ffffff" opacity="0.06"/>
+
+  <path d="M512 214c98 64 182 77 242 85v192c0 184-108 311-242 398-134-87-242-214-242-398V299c60-8 144-21 242-85z" fill="#0a2336" opacity="0.35"/>
+  <path d="M512 206c98 64 182 77 242 85v192c0 184-108 311-242 398-134-87-242-214-242-398V291c60-8 144-21 242-85z" fill="url(#shield)" stroke="#09304a" stroke-width="20" stroke-linejoin="round"/>
+  <path d="M512 258c-72 49-139 59-186 65v164c0 145 80 249 186 320 106-71 186-175 186-320V323c-47-6-114-16-186-65z" fill="#ffffff" opacity="0.14"/>
+
+  <path d="M430 578l62 62 114-124" fill="none" stroke="#27d39f" stroke-width="86" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M430 578l62 62 114-124" fill="none" stroke="#0d1b2a" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
