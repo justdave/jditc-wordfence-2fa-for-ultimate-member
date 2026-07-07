@@ -52,10 +52,12 @@ class UltimateMember {
 			return;
 		}
 
+		$posted_token_value      = filter_input( INPUT_POST, 'wfls-token', FILTER_UNSAFE_RAW );
+		$posted_remember_value   = filter_input( INPUT_POST, 'wfls-remember-device', FILTER_UNSAFE_RAW );
 		$field_id          = 'wfls-token-' . wp_generate_uuid4();
 		$container_id      = 'w2faum-container-' . wp_generate_uuid4();
-		$show_immediately  = ! empty( $_REQUEST['wfls-token'] );
-		$remember_selected = ! empty( $_REQUEST['wfls-remember-device'] );
+		$show_immediately  = is_string( $posted_token_value ) && '' !== $posted_token_value;
+		$remember_selected = is_string( $posted_remember_value ) && '' !== $posted_remember_value;
 		$disabled_attr     = $show_immediately ? '' : 'disabled';
 		?>
 		<div id="<?php echo esc_attr( $container_id ); ?>" class="um-field" data-key="wfls-token" 

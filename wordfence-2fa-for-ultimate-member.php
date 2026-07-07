@@ -60,10 +60,10 @@ final class Wordfence_2FA_for_Ultimate_Member {
 	}
 }
 
-global $_W2FAUM;
-$_W2FAUM = new Wordfence_2FA_for_Ultimate_Member();
+global $jditc_w2faum_instance;
+$jditc_w2faum_instance = new Wordfence_2FA_for_Ultimate_Member();
 
 function W2FAUM() {
-	global $_W2FAUM;
-	return $_W2FAUM;
+	global $jditc_w2faum_instance;
+	return $jditc_w2faum_instance;
 }
