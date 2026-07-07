@@ -26,13 +26,28 @@ if [ ! -e "README.md" ]; then
     exit -1
 fi
 
+# Discover the main plugin file by looking for a Plugin Name header.
+PLUGIN_FILE=""
+for candidate in *.php; do
+    [ -f "${candidate}" ] || continue
+    if head -40 "${candidate}" | grep -qE '^ \* Plugin Name:'; then
+        PLUGIN_FILE="${candidate}"
+        break
+    fi
+done
+
+if [ -z "${PLUGIN_FILE}" ]; then
+    echo "Unable to locate main plugin file (no Plugin Name header found in root PHP files)." >&2
+    exit 1
+fi
+
 # make assets directory visible
 if [ -d ".wordpress-org" ]; then
     cp -r .wordpress-org/ assets
 fi
 
 # parse the main plugin file for metadata
-CODEHEADER=`head -20 wordfence-2fa-for-ultimate-member.php`
+CODEHEADER=`head -20 "${PLUGIN_FILE}"`
 PLUGINNAME=`echo "$CODEHEADER" | grep -E '^ \* Plugin Name:' | sed -e 's/.*Plugin Name: //'`
 REQUIRESWP=`echo "$CODEHEADER" | grep -E '^ \* Requires at least:' | sed -e 's/.*Requires at least: //'`
 TESTED=`echo "$CODEHEADER" | grep -E '^ \* Tested up to:' | sed -e 's/.*Tested up to: //'`

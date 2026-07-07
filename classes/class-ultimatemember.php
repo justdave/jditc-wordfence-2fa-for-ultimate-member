@@ -80,7 +80,7 @@ class UltimateMember {
 			style="display:none;"<?php endif; ?>>
 			<div class="um-field-label">
 				<label for="<?php echo esc_attr( $field_id ); ?>">
-					<?php esc_html_e( 'Wordfence 2FA Code', 'wordfence-2fa-for-ultimate-member' ); ?>
+					<?php esc_html_e( 'Wordfence 2FA Code', 'jditc-wordfence-2fa-for-ultimate-member' ); ?>
 				</label>
 			</div>
 			<div class="um-field-area">
@@ -92,12 +92,12 @@ class UltimateMember {
 					autocomplete="one-time-code"
 					inputmode="numeric"
 					<?php echo esc_attr( $disabled_attr ); ?>
-					placeholder="<?php esc_attr_e( '123456', 'wordfence-2fa-for-ultimate-member' ); ?>"
+					placeholder="<?php esc_attr_e( '123456', 'jditc-wordfence-2fa-for-ultimate-member' ); ?>"
 				>
 				<div class="um-field-checkbox" style="margin-top:8px;">
 					<label style="display:inline-flex; align-items:center; gap:6px; line-height:1.2;">
 						<input type="checkbox" name="wfls-remember-device" value="1" <?php checked( $remember_selected ); ?> <?php echo esc_attr( $disabled_attr ); ?> style="display:inline-block !important; position:static !important; opacity:1 !important; width:auto !important; height:auto !important; clip:auto !important; clip-path:none !important; margin:0;">
-						<?php esc_html_e( 'Remember this device for 30 days', 'wordfence-2fa-for-ultimate-member' ); ?>
+						<?php esc_html_e( 'Remember this device for 30 days', 'jditc-wordfence-2fa-for-ultimate-member' ); ?>
 					</label>
 				</div>
 			</div>
